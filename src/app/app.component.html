@@ -1,0 +1,39 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Add cash</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+
+
+<div class="text-right">
+  <button (click)="openModal(content)">+ Cash In </button>
+  <button>- Cash Out </button>
+</div>
+<br>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">+ Total Cash In</th>
+        <th scope="col">- Total Cash Out</th>
+        <th scope="col">= Net Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2000</td>
+        <td>1500</td>
+        <td>500</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
